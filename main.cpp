@@ -4,21 +4,21 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //hibas konstans nev,
-    std::cout << '1-100 ertekek duplazasa' //string helyett karakterkent van kezelve, hianyzo pontosvessszo es sor emeles
-    for (int i = 0;) //hianyos for ciklus, hibas kezdoertek
+    int *b = new int[N_ELEMENTS]; 
+    std::cout << "1-100 ertekek duplazasa" << std::endl; 
+    for (int i = 1; i < N_ELEMENTS+1; i++) 
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i; i++) //hianyos for ciklus, hibas kezdoertek
+    for (int i = 1; i<N_ELEMENTS+1; i++) 
     {
-        std::cout << "Ertek:" //hianyzik a kiirando ertek, a pontosvesszo es a soremeles
+        std::cout << "Ertek:" << b[i] << std::endl; 
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
     int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++) //vesszo pontosvesszo helyett
+    for (int i = 0; i < N_ELEMENTS; i++) 
     {
-        atlag += b[i] //hianyzo pontosvesszo
+        atlag += b[i]; 
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
